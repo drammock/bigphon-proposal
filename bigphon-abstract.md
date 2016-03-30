@@ -28,10 +28,13 @@ The evaluation is done either visually, or by combining the analysis with a Text
 In the latter case, the user is provided with a series of measurements either at the given points, or evenly spaced along each interval at a user-specified rate.
 A navigation tool is available for the user to quickly move across recordings in the corpus, or marks in the TextGrid in use.
 
+For easier distribution and use, the scripts are bundled as a Praat plugin.
+The "semiauto" plugin can be installed manually, or by using CPrAN, a plugin management system for Praat which supports automatic installation, update, and testing for increased reliability.
+There will be a brief discussion of its use.
+
 # References {-}
 
 <!-- TODO: wrap up with a statement of when you would use the tools (i.e., small-to-medium corpora, or when high accuracy is required like when studying near-mergers) -->
-<!-- TODO: cpran: The semiauto tools are distributed through CPrAN [@cpran], so there will also be a brief discussion of that... -->
 <!-- TODO: say something about automatic vs hand measurement accuracy? @ShadleEtAl2016 -->
 <!-- TODO: other tools in the pipeline: syllable segmentation? -->
 <!-- TODO: mention narrow vs wideband for pitch vs formant tool? -->
