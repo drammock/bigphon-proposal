@@ -20,10 +20,13 @@ The problem is not in the algorithms themselves, but in their application: they 
 One solution is for the researcher to manually specify the parameters and validate the analyses for each of the applicable recordings.
 But this forces the user to take control of a number of aspects that are error-free when automated, such as opening files, finding temporal spans of interest, etc.
 
-“Praat semiauto” is a collection of scripts designed to alleviate these problems by automating only the aspects of the measurement task that are error-free when performed by the computer unsupervised: opening files, finding the temporal spans of interest, placing the cursor, tabulating measurements, etc.
-What the semiauto tools do _not_ automate is the act of measurement itself: when the scripts run, each measurement location is displayed onscreen at a consistent zoom level along with a dialog box displaying the current algorithm parameters.
-Users may alter the parameters at will until satisfied with the analysis, and the parameters are saved alongside the measurements to ensure reproducibility.
-Measurement locations are specified with a regular expression operating on a TextGrid tier, and users can control the number of measurements taken at each measurement location (i.e., the script can keep all analysis frames within the measurement window, or users can specify to take _n_ measurements at _n_ equally-spaced timepoints in the window).
+We present the "semiauto" collection of scripts, designed to provide a middle ground between a fully automatic and a a fully manual approach: by identifying those aspects that do not require human intervention, the researcher's attention can be focused on those that do, accelerating the fine-grained validation and minimising errors.
+A common interface and a consistent approach, and the possibility for users to always go back and review past decisions, also reduces errors and enables both internal and external auditing.
+
+The scripts are targeted to the creation and evaluation of reliable Pitch and Formant objects, which can be analysed later through other automated tools.
+The evaluation is done either visually, or by combining the analysis with a TextGrid annotation specifying a series of points or intervals of interest.
+In the latter case, the user is provided with a series of measurements either at the given points, or evenly spaced along each interval at a user-specified rate.
+A navigation tool is available for the user to quickly move across recordings in the corpus, or marks in the TextGrid in use.
 
 # References {-}
 
