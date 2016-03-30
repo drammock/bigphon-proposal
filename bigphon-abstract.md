@@ -17,6 +17,9 @@ This is particularly problematic in the case of corpora comprising diverse talke
 Errors such as pitch halving, pitch doubling, and spurious or unstable formant tracking become increasingly likely as automated scripts are applied to larger and more diverse speech corpora.
 The problem is not in the algorithms themselves, but in their application: they are designed to be tweaked and tuned by human users in order to yield optimal results, but are being used as “fire and forget” tools.
 
+One solution is for the researcher to manually specify the parameters and validate the analyses for each of the applicable recordings.
+But this forces the user to take control of a number of aspects that are error-free when automated, such as opening files, finding temporal spans of interest, etc.
+
 “Praat semiauto” is a collection of scripts designed to alleviate these problems by automating only the aspects of the measurement task that are error-free when performed by the computer unsupervised: opening files, finding the temporal spans of interest, placing the cursor, tabulating measurements, etc.
 What the semiauto tools do _not_ automate is the act of measurement itself: when the scripts run, each measurement location is displayed onscreen at a consistent zoom level along with a dialog box displaying the current algorithm parameters.
 Users may alter the parameters at will until satisfied with the analysis, and the parameters are saved alongside the measurements to ensure reproducibility.
