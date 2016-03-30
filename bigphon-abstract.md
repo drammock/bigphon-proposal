@@ -8,7 +8,7 @@ geometry:
 - margin=1in
 ---
 
-Although there is a culture of script-sharing among users of the Praat speech analysis software,[@praat] differences in researchers' interests and the recording details of their corpora can render shared scripts difficult to use.
+Although there is a culture of script-sharing among users of the Praat speech analysis program,[@praat] differences in researchers' interests and the recording details of their corpora can render shared scripts difficult to use.
 One source of difficulty stems from the need for user-specified parameters for Praat’s formant- and pitch-tracking algorithms.
 The optimal parameters vary depending on the voice of the talker and the quality of the recording; however, parameters may be left unspecified (in which case results will depend on whatever settings are in place on a particular computer at the time the script is run), or hard-coded into the script’s source code (making the parameters difficult to change for inexperienced programmers).
 
