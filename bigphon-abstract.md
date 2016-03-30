@@ -29,7 +29,7 @@ In the latter case, the user is provided with a series of measurements either at
 A navigation tool is available for the user to quickly move across recordings in the corpus, or marks in the TextGrid in use.
 
 For easier distribution and use, the scripts are bundled as a Praat plugin.
-The "semiauto" plugin can be installed manually, or by using CPrAN, a plugin management system for Praat which supports automatic installation, update, and testing for increased reliability.
+The "semiauto" plugin can be installed manually, or by using CPrAN,[@cpran] a plugin management system for Praat which supports automatic installation, update, and testing for increased reliability.
 There will be a brief discussion of its use.
 
 # References {-}
