@@ -36,7 +36,9 @@ We expect them to be especially valuable for research questions where the uncert
 
 For easier distribution and use, the scripts are bundled as a Praat plugin.
 The “semiauto” plugin can be installed manually or using CPrAN,[@cpran] a plugin management system for Praat which supports automatic installation, update, and testing for increased reliability.
-A brief introduction to CPrAN will be included as part of the presentation of the semiauto tools.
+A brief introduction to CPrAN will be included, followed by demonstrations of the semiauto pitch and formant analysis tools.
+Sample data will be provided, but the tools will work on any corpus of paired audio files and TextGrids.
+Attendees are encouraged to try the tools using their own corpora during the workshop.
 
 ![Screenshot of the semiauto pitch tool interface during an analysis session.](screenshot.png)
 
