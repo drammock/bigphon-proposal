@@ -8,33 +8,36 @@ geometry:
 - margin=1in
 ---
 
-Although there is a culture of script-sharing among users of the Praat speech analysis program,[@praat] differences in researchers' interests and the recording details of their corpora can render shared scripts difficult to use.
+Although there is a culture of script-sharing among users of the Praat speech analysis program,[@praat] differences in researchers’ interests and the recording details of their corpora can render shared scripts difficult to use.
 One source of difficulty stems from the need for user-specified parameters for Praat’s formant- and pitch-tracking algorithms.
-The optimal parameters vary depending on the voice of the talker and the quality of the recording; however, parameters may be left unspecified (in which case results will depend on whatever settings are in place on a particular computer at the time the script is run), or hard-coded into the script’s source code (making the parameters difficult to change for inexperienced programmers).
+The optimal parameters vary depending on the voice of the talker and the quality of the recording.
+However, parameters may be hard-coded into the script’s source code (making them difficult to change for inexperienced programmers), or may be left unspecified in users’ scripts (in which case results will depend on whatever settings are in place on a particular computer at the time the script is run).
 
-Even when they are made easy to change (e.g., through well-documented source code, or a dialog box presented when a script is initially run), they are often set once for an entire set of materials.
-This is particularly problematic in the case of corpora comprising diverse talkers, which often cannot be fruitfully analyzed with a one-size-fits-all set of algorithm parameters.
-Errors such as pitch halving, pitch doubling, and spurious or unstable formant tracking become increasingly likely as automated scripts are applied to larger and more diverse speech corpora.
+Even when analysis parameters are made easy to change (e.g., through well-documented source code, or a dialog box presented when a script is initially run), they are often set once for analysis of an entire corpus.
+This is particularly problematic for analysis of speech from multiple talkers: errors such as pitch halving and spurious or unstable formant tracking become increasingly likely as automated scripts are applied to larger and more diverse corpora.
 The problem is not in the algorithms themselves, but in their application: they are designed to be tweaked and tuned by human users in order to yield optimal results, but are being used as “fire and forget” tools.
 
-One solution is for the researcher to manually specify the parameters and validate the analyses for each of the applicable recordings.
-But this forces the user to take control of a number of aspects that are error-free when automated, such as opening files, finding temporal spans of interest, etc.
+To address these issues we present the “semiauto” collection of Praat scripts, designed to provide a middle ground between fully automatic and fully manual analysis workflows.
+Measurement estimates are presented with an interface for adjusting algorithm parameters for every measurement taken.
+At the same time, tedious manual oversight is avoided for steps in the analysis that are error-free when automated: opening files, zooming to temporal spans of interest, tabulating accepted measurements, etc.
+By automating steps in the analysis workflow that do not require human intervention, the researcher can focus attention on only the analysis decisions whose accuracy depends on human judgment.
+This significantly reduces time and effort, and eliminates many potential sources of user error.
 
-We present the "semiauto" collection of scripts, designed to provide a middle ground between a fully automatic and a a fully manual approach: by identifying those aspects that do not require human intervention, the researcher's attention can be focused on those that do, accelerating the fine-grained validation and minimising errors.
-A common interface and a consistent approach, and the possibility for users to always go back and review past decisions, also reduces errors and enables both internal and external auditing.
+The scripts take as input a collection of paired sound files and TextGrid annotation files.
+Analysis points or intervals are found by a regular expression search through a designated TextGrid tier.
+Users may specify the number of measurment points to be taken within each interval (i.e., a mean value for the interval, a single midpoint measurement, _n_ equally-spaced measurement times, or all available analysis frames).
+The scripts can output pitch or formant frequency measurements, and can also output Praat Pitch and Formant object files for later analysis or additional automated measurement.
+The algorithm parameters used for each interval are saved to a log file to aide reproducibility.
+An integrated navigation tool helps users to move quickly within the current recording or across recordings in the corpus.
+An example of the interface is shown in Figure 1.
 
-The scripts are targeted to the creation and evaluation of reliable Pitch and Formant objects, which can be analysed later through other automated tools.
-The evaluation is done either visually, or by combining the analysis with a TextGrid annotation specifying a series of points or intervals of interest.
-In the latter case, the user is provided with a series of measurements either at the given points, or evenly spaced along each interval at a user-specified rate.
-A navigation tool is available for the user to quickly move across recordings in the corpus, or marks in the TextGrid in use.
+The semiauto tools are designed to make high-reliability measurement feasible for small- to medium-sized corpora.
+We expect them to be especially valuable for research questions where the uncertainty or noise inherent in automated measurement is intolerable; e.g., the study of near-mergers in vowel systems, subtly different intonation patterns, etc.
 
 For easier distribution and use, the scripts are bundled as a Praat plugin.
-The "semiauto" plugin can be installed manually, or by using CPrAN,[@cpran] a plugin management system for Praat which supports automatic installation, update, and testing for increased reliability.
-There will be a brief discussion of its use.
+The “semiauto” plugin can be installed manually or using CPrAN,[@cpran] a plugin management system for Praat which supports automatic installation, update, and testing for increased reliability.
+A brief introduction to CPrAN will be included as part of the presentation of the semiauto tools.
+
+![Screenshot of the semiauto pitch tool interface during an analysis session.](screenshot.png)
 
 # References {-}
-
-<!-- TODO: wrap up with a statement of when you would use the tools (i.e., small-to-medium corpora, or when high accuracy is required like when studying near-mergers) -->
-<!-- TODO: say something about automatic vs hand measurement accuracy? @ShadleEtAl2016 -->
-<!-- TODO: other tools in the pipeline: syllable segmentation? -->
-<!-- TODO: mention narrow vs wideband for pitch vs formant tool? -->
