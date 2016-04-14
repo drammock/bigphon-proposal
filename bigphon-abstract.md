@@ -29,6 +29,7 @@ Users may specify the number of measurment points to be taken within each interv
 The scripts can output pitch or formant frequency measurements, and can also output Praat Pitch and Formant object files for later analysis or additional automated measurement.
 The algorithm parameters used for each interval are saved to a log file to aide reproducibility.
 An integrated navigation tool helps users to move quickly within the current recording or across recordings in the corpus.
+An example of the interface is shown in Figure 1.
 
 The semiauto tools are designed to make high-reliability measurement feasible for small- to medium-sized corpora.
 We expect them to be especially valuable for research questions where the uncertainty or noise inherent in automated measurement is intolerable; e.g., the study of near-mergers in vowel systems, subtly different intonation patterns, etc.
@@ -36,5 +37,7 @@ We expect them to be especially valuable for research questions where the uncert
 For easier distribution and use, the scripts are bundled as a Praat plugin.
 The “semiauto” plugin can be installed manually or using CPrAN,[@cpran] a plugin management system for Praat which supports automatic installation, update, and testing for increased reliability.
 A brief introduction to CPrAN will be included as part of the presentation of the semiauto tools.
+
+![Screenshot of the semiauto pitch tool interface during an analysis session.](screenshot.png)
 
 # References {-}
